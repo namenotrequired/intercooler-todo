@@ -1,0 +1,15 @@
+{{#each todos}}
+  <li id="todo-{{@key}}">
+    {{> todo id=@key content=this}}
+  </li>
+{{/each}}
+
+<li id="todo-{{todos.length}}">
+  <form
+    id="form-{{todos.length}}"
+    ic-post-to="/api/create"
+    ic-target="#list"
+   >
+    <input type="text" name="new-todo" value="" autofocus="autofocus" />
+  </form>
+</li>

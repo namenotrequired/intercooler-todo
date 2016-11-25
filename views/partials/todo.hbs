@@ -1,0 +1,23 @@
+<span {{#if content.done}}class="done"{{/if}}>
+  <span
+    ic-target="#todo-{{id}}"
+    ic-post-to="/api/toggle/{{id}}"
+  >
+    √
+  </span>
+
+  <span
+    ic-target="#todo-{{id}}"
+    ic-post-to="/api/edit/{{id}}"
+  >
+    {{content.text}}
+  </span>
+
+  <span
+    ic-target="#todo-{{id}}"
+    ic-delete-from="/api/delete/{{id}}"
+    class="right"
+  >
+    x
+  </span>
+</span>
